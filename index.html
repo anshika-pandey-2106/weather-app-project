@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-<script src="index.js" defer></script>
-<link stylesheet="styles.css">
-
-</head>
-<body>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/weather-icons.min.css"/>
     
-</body>
+  </head>
+  <body>
+    <div class=" search-container">
+      <input class="search-bar" type="text" placeholder="search..." />
+      <button class="search-button">Search</button>
+    </div>
+
+
+    <div class="weather-container">
+
+        <div class="location-icon" style="display:flex">
+            <h1 class="location">hi</h1>
+            <img class="icon" src="" alt="" />
+        </div>
+
+        <div class="temperature">
+            <h1 class="temp-info"></h1>
+        </div>
+
+        <div class="other-info">
+            <h2 class="description"></h3>
+                <h3 class="humidity-info"></h3>
+                <h3 class="feelslike-info"></h3>
+                <div class="sunrise">
+                    <img src="" alt/>
+                    <h3 class="sunrise-info"></h3>
+                </div>
+                <div class="sunset">
+                    <h3 class="sunset-info"></h3>
+                    <img src="" alt="" class="sunset-icon"/>
+                </div>
+                
+                
+        </div>
+
+    </div>
+
+
+  </body>
 </html>
