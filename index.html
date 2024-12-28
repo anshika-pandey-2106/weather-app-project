@@ -19,7 +19,21 @@
     <div class="weather-container">
 
         <div class="location-icon" style="display:flex">
-            <h1 class="location">hi</h1>
+            <h1 class="location">
+                <script class="greeting">
+                    const now= new Date();
+                    const hour= now.getHours();
+                    if(hour<12){
+                        document.write("Good Morning, let's check the weather today?");
+                    }
+                    else if(hour<18){
+                        document.write("Good Afternoon, let's check the weather today?");
+                    }
+                    else{
+                        document.write("Good Evening, let's check the weather today?");
+                    }
+                </script>
+            </h1>
             <img class="icon" src="" alt="" />
         </div>
 
