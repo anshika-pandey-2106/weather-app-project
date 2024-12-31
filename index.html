@@ -10,7 +10,7 @@
     
   </head>
   <body style="display: flex;" >
-    <div class="weather">
+<div class="weather">
     <div class=" search-container">
       <input class="search-bar" type="text" placeholder="search..." />
       <button class="search-button">Search</button>
@@ -19,7 +19,8 @@
 
     <div class="weather-container">
 
-        <div class="location-icon" style="display:flex">
+        <div class="location-icon " style="text-align: center;">
+            <img class="icon" src="" alt="" />
             <h1 class="location">
                 <script class="greeting">
                     const now= new Date();
@@ -34,25 +35,29 @@
                         document.write("Good Evening, let's check the weather today?");
                     }
                 </script>
-            </h1>
-            <img class="icon" src="" alt="" />
+            </h1>   
         </div>
 
-        <div class="temperature">
+        <div class="temperature" style="text-align: center;">
             <h1 class="temp-info"></h1>
         </div>
-
+        <h2 class="description" style="text-align: center;"></h3>
         <div class="other-info">
-            <h2 class="description"></h3>
-                <h3 class="humidity-info"></h3>
-                <h3 class="feelslike-info"></h3>
-                <div class="sunrise">
-                    <img src="" alt="" class="sunrise-icon"/>
-                    <h3 class="sunrise-info"></h3>
+            
+                <div class="info-1">
+                <h3 class="humidity-info hidden"></h3>
+                <h3 class="feelslike-info hidden"></h3>
                 </div>
-                <div class="sunset">
+
+                <div class="info-1">
+                
+                    <h3 class="sunrise-info hidden"></h3>
+                    
+                
+                
                     <h3 class="sunset-info"></h3>
-                    <img src="" alt="" class="sunset-icon"/>
+                    
+                
                 </div>
                 
                 

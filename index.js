@@ -55,7 +55,7 @@ async function main(city) {
 
   //adding new data to html elements
   const locHTML = document.querySelector(".location");
-  locHTML.textContent = city;
+  locHTML.textContent = city.toUpperCase();
 
   const mainIcon = document.querySelector(".icon");
   {
@@ -75,7 +75,7 @@ async function main(city) {
 
   const feelslikeHTML = document.querySelector(".feelslike-info");
   feelslikeHTML.textContent = ""; //clear
-  feelslikeHTML.textContent = "Feels Like: " + finalData.feelslike;
+  feelslikeHTML.textContent = "Feels Like: " + finalData.feelslike+ "°F";
 
   const humidityHTML = document.querySelector(".humidity-info");
 
@@ -84,11 +84,11 @@ async function main(city) {
 
   const sunriseHTML = document.querySelector(".sunrise-info");
   sunriseHTML.textContent = "";
-  sunriseHTML.textContent ="Sunrise: "+ finalData.sunrise;
+  sunriseHTML.textContent ="Sunrise: "+ finalData.sunrise+ " AM";
 
   const sunsetHTML = document.querySelector(".sunset-info");
   sunsetHTML.textContent = "";
-  sunsetHTML.textContent = "Sunset" + finalData.sunset;
+  sunsetHTML.textContent = "Sunset: " + finalData.sunset+ " PM";
 
   const quotes1= document.querySelector(".q1");
   quotes1.textContent="Your trusted source of";
@@ -105,5 +105,20 @@ const searchButton = document.querySelector(".search-button");
 
 searchButton.addEventListener("click", () => {
   const city = searchBar.value;
-  main(city);
+  if (city.trim() !== "") {
+    main(city); // Fetch and display weather data
+    const humi= document.querySelector(".humidity-info");
+    const feels= document.querySelector(".feelslike-info");
+    const sunr= document.querySelector(".sunrise-info");
+    const suns= document.querySelector(".sunset-info");
+
+    humi.classList.remove("hidden");
+    humi.classList.add("box-color");
+    feels.classList.remove("hidden");
+    feels.classList.add("box-color");
+    sunr.classList.remove("hidden");
+    sunr.classList.add("box-color");
+    suns.classList.remove("hidden");
+    suns.classList.add("box-color");
+  }
 });
