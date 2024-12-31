@@ -1,0 +1,27 @@
+.weather{
+    width:auto;
+
+}
+.quotes-container{
+    background-color:#e4f7ff;
+    padding:2vw;
+    width:60vw;
+    margin:0;
+    height:100vh;
+
+}
+@media (max-width: 720px) {
+    body{
+display:flex;
+flex-direction:column;
+    }
+    .quotes-container {
+      padding: 10vw;
+      width:100vw;
+
+    }
+    .weather {
+        max-width:100vw;
+      
+    }
+  }

@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/weather-icons.min.css"/>
     
   </head>
-  <body>
+  <body style="display: flex;" >
+    <div class="weather">
     <div class=" search-container">
       <input class="search-bar" type="text" placeholder="search..." />
       <button class="search-button">Search</button>
@@ -46,7 +47,7 @@
                 <h3 class="humidity-info"></h3>
                 <h3 class="feelslike-info"></h3>
                 <div class="sunrise">
-                    <img src="" alt/>
+                    <img src="" alt="" class="sunrise-icon"/>
                     <h3 class="sunrise-info"></h3>
                 </div>
                 <div class="sunset">
@@ -58,7 +59,12 @@
         </div>
 
     </div>
-
+</div>
+<div class="quotes-container">
+    <p class="q1"></p>
+    <p class="q2"></p>
+    <p class="q3"></p>
+</div>
 
   </body>
 </html>

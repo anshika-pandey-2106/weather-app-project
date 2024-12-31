@@ -45,6 +45,9 @@ function getWeatherIcon(iconId) {
   return weatherIconMap[iconId] || "wi-day-sunny";
 }
 
+async function fetchQuote(){
+
+}
 async function main(city) {
   const getData = await getAPIData(city);
   const finalData = await myData(getData);
@@ -68,24 +71,33 @@ async function main(city) {
 
   const tempHTML = document.querySelector(".temp-info");
   tempHTML.textContent = ""; //clear
-  tempHTML.textContent = finalData.temp;
+  tempHTML.textContent = "Temperature: " +finalData.temp+ "°F";
 
   const feelslikeHTML = document.querySelector(".feelslike-info");
   feelslikeHTML.textContent = ""; //clear
-  feelslikeHTML.textContent = finalData.feelslike;
+  feelslikeHTML.textContent = "Feels Like: " + finalData.feelslike;
 
   const humidityHTML = document.querySelector(".humidity-info");
 
   humidityHTML.textContent = ""; // clear
-  humidityHTML.textContent = finalData.humidity;
+  humidityHTML.textContent ="Humidity: "+ finalData.humidity;
 
   const sunriseHTML = document.querySelector(".sunrise-info");
   sunriseHTML.textContent = "";
-  sunriseHTML.textContent = finalData.sunrise;
+  sunriseHTML.textContent ="Sunrise: "+ finalData.sunrise;
 
   const sunsetHTML = document.querySelector(".sunset-info");
   sunsetHTML.textContent = "";
-  sunsetHTML.textContent = finalData.sunset;
+  sunsetHTML.textContent = "Sunset" + finalData.sunset;
+
+  const quotes1= document.querySelector(".q1");
+  quotes1.textContent="Your trusted source of";
+
+  const quotes2= document.querySelector(".q2");
+  quotes2.textContent="Accurate, Worldwide Weather Updates";
+
+  const quotes3= document.querySelector(".q3");
+  quotes3.textContent="Anytime, Anywhere.";
 }
 
 const searchBar = document.querySelector(".search-bar");
