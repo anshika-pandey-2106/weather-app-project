@@ -7,3 +7,5 @@ Feels Like: Perceived temperature for better context.
 Humidity: Displays the current humidity level.
 Short Description: A concise summary of the current weather conditions.
 Weather Icon: Intuitive icons for quick interpretation of the weather
+
+
